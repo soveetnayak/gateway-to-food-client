@@ -72,7 +72,7 @@ export default function SignInSide() {
         password: data.get("password"),
       });
       axios
-        .post("http://localhost:4000/user/login", {
+        .post("https://gateway-to-food.herokuapp.com/user/login", {
           email: data.get("email"),
           password: data.get("password"),
         })

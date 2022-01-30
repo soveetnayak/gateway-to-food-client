@@ -69,7 +69,7 @@ export default function VStatistics() {
   const [array_5, setArray_5] = useState(["", "", "", "", ""]);
   useEffect(() => {
     axios
-      .post("http://localhost:4000/vendor/allemails", {
+      .post("https://gateway-to-food.herokuapp.com/vendor/allemails", {
         email: ls.get("email"),
       })
       .then((response) => {
@@ -80,7 +80,7 @@ export default function VStatistics() {
         console.log(error);
       });
     axios
-      .post("http://localhost:4000/vendor/allbuyers")
+      .post("https://gateway-to-food.herokuapp.com/vendor/allbuyers")
       .then((response) => {
         arr2 = response.data.emails;
         arrbatch = response.data.batch;
@@ -91,7 +91,7 @@ export default function VStatistics() {
         console.log(error);
       });
     axios
-      .post("http://localhost:4000/vendor/statsplaced", {
+      .post("https://gateway-to-food.herokuapp.com/vendor/statsplaced", {
         email: ls.get("email"),
       })
       .then((res) => {
@@ -101,7 +101,7 @@ export default function VStatistics() {
         console.log(err);
       });
     axios
-      .post("http://localhost:4000/vendor/statspending", {
+      .post("https://gateway-to-food.herokuapp.com/vendor/statspending", {
         email: ls.get("email"),
       })
       .then((res) => {
@@ -111,7 +111,7 @@ export default function VStatistics() {
         console.log(err);
       });
     axios
-      .post("http://localhost:4000/vendor/statscompleted", {
+      .post("https://gateway-to-food.herokuapp.com/vendor/statscompleted", {
         email: ls.get("email"),
       })
       .then((res) => {
@@ -121,7 +121,7 @@ export default function VStatistics() {
         console.log(err);
       });
     axios
-      .post("http://localhost:4000/vendor/statstop", {
+      .post("https://gateway-to-food.herokuapp.com/vendor/statstop", {
         email: ls.get("email"),
       })
       .then((res) => {

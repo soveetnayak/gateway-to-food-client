@@ -29,7 +29,7 @@ export default function Fav() {
   useEffect(() => {
     // Get all documents from the database for item for the particular vendor
     axios
-      .post("http://localhost:4000/buyer/getfavourites", {
+      .post("https://gateway-to-food.herokuapp.com/buyer/getfavourites", {
         email: ls.get("email"),
       })
       .then((response) => {
@@ -44,7 +44,7 @@ export default function Fav() {
 
   const handlefavourite = (key) => {
       axios
-        .post("http://localhost:4000/buyer/removefavourite", {
+        .post("https://gateway-to-food.herokuapp.com/buyer/removefavourite", {
             email: ls.get("email"),
             _id: key
         })

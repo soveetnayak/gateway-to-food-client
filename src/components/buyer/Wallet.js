@@ -26,7 +26,7 @@ export default function Wallet() {
   const [positive, setPositive] = React.useState(true);
     useEffect(() => {
         axios
-            .post("http://localhost:4000/buyer/walletdetails", {
+            .post("https://gateway-to-food.herokuapp.com/walletdetails", {
                 email: ls.get("email"),
             })
             .then((res) => {
@@ -52,7 +52,7 @@ export default function Wallet() {
         if(add !== 0 || add !== ""){
         e.preventDefault();
         axios
-            .post("http://localhost:4000/buyer/addmoney", {
+            .post("https://gateway-to-food.herokuapp.com/addmoney", {
                 email: ls.get("email"),
                 amount: add,
             })

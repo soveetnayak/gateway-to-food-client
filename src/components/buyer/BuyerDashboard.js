@@ -103,7 +103,7 @@ export default function Myitem() {
   useEffect(() => {
     // Get all documents from the database for item for the particular vendor
     axios
-      .post("http://localhost:4000/buyer/showmenu")
+      .post("https://gateway-to-food.herokuapp.com/buyer/showmenu")
       .then((res) => {
         setMenu(res.data);
         array0 = res.data; //original
@@ -131,7 +131,7 @@ export default function Myitem() {
       });
 
     axios
-      .post("http://localhost:4000/buyer/walletdetails", {
+      .post("https://gateway-to-food.herokuapp.com/buyer/walletdetails", {
         email: ls.get("email"),
       })
       .then((res) => {
@@ -144,7 +144,7 @@ export default function Myitem() {
 
     //Save opening and closing time of shops in arrays
     axios
-      .post("http://localhost:4000/buyer/shoptimings")
+      .post("https://gateway-to-food.herokuapp.com/buyer/shoptimings")
       .then((res) => {
         shoptimings = res.data;
         console.log(shoptimings);
@@ -164,7 +164,7 @@ export default function Myitem() {
   const handlefavourite = (key) => {
     //add to favourites
     axios
-      .post("http://localhost:4000/buyer/addfavourite", {
+      .post("https://gateway-to-food.herokuapp.com/buyer/addfavourite", {
         _id: key,
         email: ls.get("email"),
       })
@@ -949,7 +949,7 @@ function SimpleDialog(props) {
         time: time,
       });
       axios
-        .post("http://localhost:4000/buyer/orderitem", {
+        .post("https://gateway-to-food.herokuapp.com/buyer/orderitem", {
           item_id: selectedValue,
           itemname: itemname,
           vendoremail: vendoremail,
@@ -970,7 +970,7 @@ function SimpleDialog(props) {
         });
       //deduct money
       axios
-        .post("http://localhost:4000/buyer/deductmoney", {
+        .post("https://gateway-to-food.herokuapp.com/buyer/deductmoney", {
           email: ls.get("email"),
           amount: p,
         })
@@ -988,7 +988,7 @@ function SimpleDialog(props) {
 
   useEffect(() => {
     axios
-      .post("http://localhost:4000/buyer/getitem", {
+      .post("https://gateway-to-food.herokuapp.com/buyer/getitem", {
         _id: selectedValue,
       })
       .then((res) => {

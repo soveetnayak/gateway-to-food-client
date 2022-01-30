@@ -50,7 +50,7 @@ export default function MyProfile() {
       // setBatch(document.getElementById("batch").value);
 
       axios
-        .post("http://localhost:4000/user/buyerupdate", {
+        .post("https://gateway-to-food.herokuapp.com/user/buyerupdate", {
           email: ls.get("email"),
           name: document.getElementById("name").value,
           contact: document.getElementById("contact").value,
@@ -75,7 +75,7 @@ export default function MyProfile() {
       setClosetime(document.getElementById("closetime").value);
 
       axios
-        .post("http://localhost:4000/user/vendorupdate", {
+        .post("https://gateway-to-food.herokuapp.com/user/vendorupdate", {
           email: ls.get("email"),
           managername: document.getElementById("managername").value,
           shopname: document.getElementById("shopname").value,
@@ -100,7 +100,7 @@ export default function MyProfile() {
       //awaiting for backend
       ls.get("usertype") === 1
         ? axios 
-            .post("http://localhost:4000/user/buyerdetails", {
+            .post("https://gateway-to-food.herokuapp.com/user/buyerdetails", {
               email: ls.get("email"),
             })
             .then((response) => {
@@ -116,7 +116,7 @@ export default function MyProfile() {
               console.log(error);
             })
         : axios
-            .post("http://localhost:4000/user/vendordetails", {
+            .post("https://gateway-to-food.herokuapp.com/user/vendordetails", {
               email: ls.get("email"),
             })
             .then((response) => {

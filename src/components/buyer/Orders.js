@@ -23,7 +23,7 @@ export default function MyOrders() {
   useEffect(() => {
     // Get all documents from the database for orders for the particular vendor
     axios
-      .post("http://localhost:4000/buyer/getallorders", {
+      .post("https://gateway-to-food.herokuapp.com/buyer/getallorders", {
         buyeremail: ls.get("email"),
       })
       .then((response) => {
@@ -41,7 +41,7 @@ export default function MyOrders() {
     const _id = props;
 
     axios
-      .post("http://localhost:4000/buyer/pickuporder", {
+      .post("https://gateway-to-food.herokuapp.com/buyer/pickuporder", {
         _id: _id,
       })
       .then((response) => {
@@ -58,7 +58,7 @@ export default function MyOrders() {
     // console.log(rating);
     // console.log(document.getElementById("rating").value);
     axios
-      .post("http://localhost:4000/buyer/ratethefood", {
+      .post("https://gateway-to-food.herokuapp.com/buyer/ratethefood", {
         _id: a,
         rating: b,
       })

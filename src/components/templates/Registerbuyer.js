@@ -94,7 +94,7 @@ export default function SignUpB() {
       contact: data.get("contact"),
     });
     axios
-      .post("http://localhost:4000/user/registerbuyer", {
+      .post("https://gateway-to-food.herokuapp.com/user/registerbuyer", {
         name: data.get("name"),
         email: data.get("email"),
         password: data.get("password"),

@@ -45,7 +45,7 @@ export default function Adding() {
   const [shopname, setShopname] = React.useState("");
   useEffect(() => {
     axios
-      .post("http://localhost:4000/vendor/getshopname", {
+      .post("https://gateway-to-food.herokuapp.com/vendor/getshopname", {
         email: ls.get("email")
       })
       .then(res => {
@@ -95,7 +95,7 @@ export default function Adding() {
     console.log(itemname, price, veg, tags, addonname, addonprice, shopname);
 
     axios
-      .post("http://localhost:4000/vendor/addfooditem", {
+      .post("https://gateway-to-food.herokuapp.com/vendor/addfooditem", {
         manageremail: ls.get("email"),
         itemname: itemname,
         price: price,

@@ -5,7 +5,7 @@ const Profile = (props) => {
   const [details, setDetails] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:4000/profile") // unimplemented
+      .get("https://gateway-to-food.herokuapp.com/profile") // unimplemented
       .then((response) => {
         setDetails(response.data);
       })

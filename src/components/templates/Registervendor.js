@@ -91,7 +91,7 @@ export default function SignUpV() {
     });
     if( emailbool && contactbool && password.length>=6){
     axios
-      .post("http://localhost:4000/user/registervendor", {
+      .post("https://gateway-to-food.herokuapp.com/user/registervendor", {
         managername: data.get("managername"),
         email: data.get("email"),
         password: data.get("password"),
@@ -114,7 +114,7 @@ export default function SignUpV() {
     }
   };
 
-  // axios.post('http://localhost:4000/user/registervendor', newVendor)
+  // axios.post('https://gateway-to-food.herokuapp.com/user/registervendor', newVendor)
   // .then(res => {
   //   alert("Vendor Registered")
   //   console.log(res.data)

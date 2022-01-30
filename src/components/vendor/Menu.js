@@ -39,7 +39,7 @@ export default function ShowMenu() {
 
   const handledelete = (id) => {
     axios
-      .post('http://localhost:4000/vendor/deletefooditem/', {
+      .post('https://gateway-to-food.herokuapp.com/vendor/deletefooditem/', {
         _id: id
       })
       .then((res) => {
@@ -53,7 +53,7 @@ export default function ShowMenu() {
   useEffect(() => {
     // Get all documents from the database for orders for the particular vendor
     axios
-      .post("http://localhost:4000/vendor/fooditems", {
+      .post("https://gateway-to-food.herokuapp.com/vendor/fooditems", {
         manageremail: ls.get("email"),
       })
       .then((response) => {

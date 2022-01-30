@@ -39,7 +39,7 @@ export default function BasicTable() {
   useEffect(() => {
     // Get all documents from the database for orders for the particular vendor
     axios
-      .post("http://localhost:4000/vendor/showorders", {
+      .post("https://gateway-to-food.herokuapp.com/vendor/showorders", {
         manageremail: ls.get("email"),
       })
       .then((response) => {
@@ -93,7 +93,7 @@ export default function BasicTable() {
     }
 
     axios
-      .post("http://localhost:4000/vendor/updateorderstatus", {
+      .post("https://gateway-to-food.herokuapp.com/vendor/updateorderstatus", {
         _id: props._id,
         aorr: "a",
       })
@@ -127,7 +127,7 @@ export default function BasicTable() {
         console.log("FAILED...", err);
       });
     axios
-      .post("http://localhost:4000/vendor/updateorderstatus", {
+      .post("https://gateway-to-food.herokuapp.com/vendor/updateorderstatus", {
         _id: props._id,
         aorr: "r",
       })
@@ -139,7 +139,7 @@ export default function BasicTable() {
       });
     //refund
     axios
-      .post("http://localhost:4000/vendor/refund", {
+      .post("https://gateway-to-food.herokuapp.com/vendor/refund", {
         email: props.buyeremail,
         amount: props.totalprice,
       })

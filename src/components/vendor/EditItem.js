@@ -34,7 +34,7 @@ export default function Editing() {
         var xtags = document.getElementById("tags").value.split(",");
         var xaddonname = document.getElementById("addonname").value.split(",");
         var xaddonprice = document.getElementById("addonprice").value.split(",");
-        axios.post('http://localhost:4000/vendor/editfooditem', {
+        axios.post('https://gateway-to-food.herokuapp.com/vendor/editfooditem', {
             _id: ls.get('editid'),
             itemname: document.getElementById("itemname").value,
             price: document.getElementById("price").value,
@@ -55,7 +55,7 @@ export default function Editing() {
 
       //Use edit id from local storage
     useEffect(() => {
-            axios.post('http://localhost:4000/vendor/fooditem', {
+            axios.post('https://gateway-to-food.herokuapp.com/vendor/fooditem', {
                 _id: ls.get('editid')
             })
             .then(function (response) {

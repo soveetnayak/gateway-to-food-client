@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.29e4fc4b.css",
+    "main.js": "/static/js/main.37059c40.js",
+    "static/js/787.9750ae9a.chunk.js": "/static/js/787.9750ae9a.chunk.js",
+    "static/media/peach-cat-cute.gif": "/static/media/peach-cat-cute.376fe682dd2b529e32a6.gif",
+    "static/media/home_img.jpg": "/static/media/home_img.34f9c9e12e360a3d3a8b.jpg",
+    "index.html": "/index.html",
+    "main.29e4fc4b.css.map": "/static/css/main.29e4fc4b.css.map",
+    "main.37059c40.js.map": "/static/js/main.37059c40.js.map",
+    "787.9750ae9a.chunk.js.map": "/static/js/787.9750ae9a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29e4fc4b.css",
+    "static/js/main.37059c40.js"
+  ]
+}
